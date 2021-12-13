@@ -25,7 +25,7 @@ const BarkParks = (): JSX.Element => {
     'Nature Spots',
     'Walking Trails',
   ];
-  if (user) {
+  if (user._id) {
     showingList = [
       'Everything',
       'Dog Parks',
