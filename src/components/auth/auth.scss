@@ -31,12 +31,12 @@
   overflow: hidden;
   background-image: linear-gradient(to top right, #b36b39, #b36b39);
 }
-@media screen and (max-height: 500px) {
+/* @media screen and (max-height: 500px) {
   .center {
     transition: transform 0.5s;
     transform: translate(-50%, -50%) scale(0.8);
   }
-}
+} */
 .center .ear {
   position: absolute;
   top: -110px;
