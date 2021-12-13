@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://z4gsx72mdnf.p55.rt3.io' });
+const API = axios.create({ baseURL: 'https://x3p8cjhi7o5.p50.rt3.io' });
 
 /* this might not be needed
 API.interceptors.request.use((req:) => {
