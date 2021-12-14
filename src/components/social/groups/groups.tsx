@@ -49,7 +49,7 @@ const Groups = (): JSX.Element => {
 
   let groupsObjectList: any[] = [];
   useEffect(() => {
-    user.groups.map((groupId: any) =>
+    user.groups&&user.groups.map((groupId: any) =>
       groupsObjectList.push(groupGetter(groupId))
     );
   }, []);

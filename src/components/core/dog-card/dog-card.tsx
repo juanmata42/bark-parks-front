@@ -57,10 +57,14 @@ export default function DogCard({
         </div>
       </div>
       <div className="dog-card__bottom">
-        <div className="dog-card__location">
-          <h3 className="dog-card__location-title">I am here:</h3>
-          <p className="dog-card__location-name">{parkGetter(location).name}</p>
-        </div>
+        {location && (
+          <div className="dog-card__location">
+            <h3 className="dog-card__location-title">I am here:</h3>
+            <p className="dog-card__location-name">
+              {parkGetter(location).name}
+            </p>
+          </div>
+        )}
         <div className="dog-card__going">
           {location && (
             <>
