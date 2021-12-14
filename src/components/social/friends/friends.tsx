@@ -66,6 +66,7 @@ const Friends = (): JSX.Element => {
     setFriendsListState(friendsListState);
   };
   const [friendsListState, setFriendsListState] = useState(friendsList);
+
   return (
     <>
       <div className="parks-container page-with-subheader">

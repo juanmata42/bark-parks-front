@@ -69,7 +69,7 @@ export default function DogCard({
           {location && (
             <>
               I'm coming!
-              <BarkBtn id={id} />
+              <BarkBtn id={location} />
             </>
           )}
         </div>

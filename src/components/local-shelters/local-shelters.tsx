@@ -6,7 +6,7 @@ import DropdownMenu from '../core/dropdown-menu/dropdown-menu';
 const LocalShelters = (): JSX.Element => {
   const Shelters: any[] = useSelector((state: any) => state.shelters.shelters);
   let countriesList: any[] = [];
-  Shelters.map((shelter) => {
+  Shelters.forEach((shelter) => {
     if (!countriesList.some((country) => country === shelter.country)) {
       countriesList.push(shelter.country);
     }
@@ -16,7 +16,7 @@ const LocalShelters = (): JSX.Element => {
       (shelter) => shelter.country === country
     );
     let regionsList: any[] = [];
-    countryShelters.map(
+    countryShelters.forEach(
       (shelter) =>
         !regionsList.includes(shelter.region) &&
         regionsList.push(shelter.region)
@@ -26,7 +26,7 @@ const LocalShelters = (): JSX.Element => {
   function listBuilder(country: string) {
     let regionList = listWithRegions(country);
     let sheltersInRegion: { region: string; shelters: any[] }[] = [];
-    regionList.map((region) =>
+    regionList.forEach((region) =>
       sheltersInRegion.push({
         region: region,
         shelters: Shelters.filter((shelter) => shelter.region === region),

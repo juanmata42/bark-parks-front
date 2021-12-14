@@ -31,7 +31,7 @@ const CustomPopup = ({
   useEffect(() => {
     setShow(showing);
   }, [showing]);
-  const park: any = parkList.find((item:any) => item._id === parkId);
+  const park: any = parkList.find((item: any) => item._id === parkId);
   const {
     selectedFile,
     name,
@@ -45,6 +45,7 @@ const CustomPopup = ({
     rating: number[];
     _id: string;
   } = park;
+
   return (
     <div
       style={{

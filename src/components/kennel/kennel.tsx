@@ -115,6 +115,7 @@ const Kennel = (): JSX.Element => {
     setVisibility(e);
   };
   const [postsList, setPostsList] = useState(orderingPosts());
+  console.log(parksWithFriends);
   return (
     <>
       <header className="post-input">
