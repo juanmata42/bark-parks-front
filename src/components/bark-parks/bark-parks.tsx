@@ -49,7 +49,7 @@ const BarkParks = (): JSX.Element => {
     kind: '',
     selectedFile: '',
     mapDirections: '',
-    userId: userStorage.data.user._id,
+    userId: userStorage.data ? userStorage.data.user._id : '',
   };
   // edit map directions so spaces are turned into "+" and no tildes or ñ
   const [form, setForm] = useState(initialState);
