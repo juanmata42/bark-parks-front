@@ -43,3 +43,13 @@ export const getGroups = () => async (dispatch: any) => {
     console.log(error);
   }
 };
+export const leaveGroup = (body: object, jwt: string) => async (dispatch: any) => {
+  try {
+    dispatch({
+      type: 'LEAVE_GROUP',
+      payload: await api.leaveGroup(body, jwt),
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}

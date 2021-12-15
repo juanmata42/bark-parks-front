@@ -2,7 +2,7 @@ import './group-card.scss';
 import React, { useState } from 'react';
 import BarkBtn from '../BarkBtn/BarkBtn';
 import { useDispatch, useSelector } from 'react-redux';
-import { editMeetups, joinGroup } from '../../../actions/groups';
+import { editMeetups, joinGroup, leaveGroup } from '../../../actions/groups';
 import CustomPopup from '../park-card/custom-popup';
 
 type GroupCardProps = {
@@ -12,6 +12,8 @@ type GroupCardProps = {
   meetups: { frequency: string; time: string; dogSpotId: string }[];
   id: string;
   members: any[];
+  setGroupsList: Function;
+  groupsList: any[];
 };
 export default function GroupCard({
   selectedFile,
@@ -20,6 +22,8 @@ export default function GroupCard({
   meetups,
   id,
   members,
+  setGroupsList,
+  groupsList,
 }: GroupCardProps): JSX.Element {
   const dispatch = useDispatch();
   const userStorage = JSON.parse(localStorage.getItem('user') || '{}');
@@ -52,6 +56,7 @@ export default function GroupCard({
   });
   const handleChangeMeetup = (e: any): void => {
     setmeetup({ ...meetup, [e.target.name]: e.target.value });
+    console.log(groupsList);
   };
   const handleAddMeetup = (e: any) => {
     e.preventDefault();
@@ -93,9 +98,19 @@ export default function GroupCard({
         />
       ));
   }
+  function handleLeaveGroup(e: any) {
+    e.preventDefault();
+    dispatch(
+      leaveGroup({ userId: user._id, groupId: id }, userStorage.data.token)
+    );
+    setGroupsList(groupsList.filter((group: any) => group._id !== id));
+  }
   return (
     <div className="group-card">
-      <button className="leave-group-btn filter-dark">
+      <button
+        className="leave-group-btn filter-dark"
+        onClick={handleLeaveGroup}
+      >
         <svg
           width={25}
           height={23}

@@ -49,15 +49,17 @@ const Groups = (): JSX.Element => {
 
   let groupsObjectList: any[] = [];
   useEffect(() => {
-    user.groups&&user.groups.map((groupId: any) =>
-      groupsObjectList.push(groupGetter(groupId))
-    );
+    user.groups &&
+      user.groups.map((groupId: any) =>
+        groupsObjectList.push(groupGetter(groupId))
+      );
   }, []);
 
   const [groupsList, setGroupsList] = useState(groupsObjectList);
   const [form, setForm] = useState(initialState);
   const handleChange = (e: any): void => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    console.log(groupsList[0]._id);
   };
   const handleCreateGroup = (e: any) => {
     e.preventDefault();
@@ -201,15 +203,20 @@ const Groups = (): JSX.Element => {
             _id: string;
             members: string[];
           }) => (
-            <GroupCard
-              selectedFile={selectedFile}
-              name={name}
-              description={description}
-              meetups={meetups}
-              id={_id}
-              key={_id}
-              members={members}
-            />
+            console.log(groupsList),
+            (
+              <GroupCard
+                selectedFile={selectedFile}
+                name={name}
+                description={description}
+                meetups={meetups}
+                id={_id}
+                key={_id}
+                members={members}
+                setGroupsList={setGroupsList}
+                groupsList={groupsList}
+              />
+            )
           )
         )}
     </div>

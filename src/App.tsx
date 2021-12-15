@@ -18,7 +18,6 @@ import Social from './components/social/social';
 import Friends from './components/social/friends/friends';
 import Groups from './components/social/groups/groups';
 import Kennel from './components/kennel/kennel';
-
 import { useDispatch } from 'react-redux';
 
 const App = (): JSX.Element => {

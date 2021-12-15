@@ -49,7 +49,7 @@ const BarkParks = (): JSX.Element => {
     kind: '',
     selectedFile: '',
     mapDirections: '',
-    userId: user._id,
+    userId: userStorage.data.user._id,
   };
   // edit map directions so spaces are turned into "+" and no tildes or ñ
   const [form, setForm] = useState(initialState);
@@ -62,7 +62,7 @@ const BarkParks = (): JSX.Element => {
       kind: '',
       selectedFile: '',
       mapDirections: '',
-      userId: user._id,
+      userId: userStorage.data.user._id,
     });
   };
   const handleAddPark = (e: any) => {
@@ -70,6 +70,7 @@ const BarkParks = (): JSX.Element => {
     //function to turn spaces into "+"
     const mapDirections = form.mapDirections.split(' ').join('+');
     dispatch(createDogSpot(form, userStorage.data.token));
+    console.log(form);
     setParkList([...parkList, form]);
     clear();
   };
