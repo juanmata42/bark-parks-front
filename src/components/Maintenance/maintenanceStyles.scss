@@ -10,22 +10,26 @@
     align-items: center;
     padding-top: 80px;
     width: 100%;
+    gap: 20px;
 }
-
+.maint__logo{
+    height: auto;
+    width: 80vw;
+    max-width: 360px;
+}
 .maint__title {
     font-weight: fonts.$bold;
     font-size: fonts.$big-title;
-    margin: 40px 0 12px 0;
+    text-align: center;
 }
 
 .maint__subtitle {
     font-size: fonts.$subtitle;
-    margin: 40px 0 10px 0;
     text-align: center;
 }
 
-.maint__logo {
-    height: 10vh;
-    width: auto;
+.maint__gif{
+    height: auto;
+    width: 70vw;
+    max-width: 300px;
 }
-
