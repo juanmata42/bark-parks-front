@@ -1,8 +1,6 @@
 @use 'normalize';
 @use 'fonts';
 @use 'colors';
-@import '@fortawesome/fontawesome-free/css/all.min.css';
-
 *,
 *:before,
 *:after {
@@ -11,51 +9,12 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
-  font-family: fonts.$font-normal;
+  font-family: fonts.$roboto;
   color: colors.$text-color;
   box-sizing: border-box;
-}
-
-.button-primary {
-  font-family: fonts.$font-normal;
-  background-color: colors.$primary;
-  color: colors.$secondary;
-  border-radius: 10px;
-  border: none;
-}
-
-.button-secondary {
-  font-family: fonts.$font-normal;
-  background-color: colors.$secondary;
-  color: colors.$primary;
-  border-radius: 10px;
-  border: solid 1px colors.$primary;
-}
-
-.button-tertiary {
-  font-family: fonts.$font-normal;
-  background-color: colors.$secondary;
-  color: colors.$dark-gray;
-  border-radius: 10px;
-  border: solid 1px colors.$gray;
-}
-
-.dropdown-list{
-  border-radius: 10px;
-  background-color: colors.$secondary;
-  box-shadow: 2px 2px 14px 0 rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  z-index: 500;
-  overflow-y: auto;
-  max-height: 250px;
-&::-webkit-scrollbar {
-  width: 5px;
-}
-&::-webkit-scrollbar-track {
-  border-radius: 10px;
-}
 }
 
 html,

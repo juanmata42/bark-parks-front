@@ -1,18 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { RotatingLines } from 'react-loader-spinner';
 import './LoadingStyles.scss';
+import loadingDog from 'assets/loading-dog.gif';
 
 const Loading: React.FC<{ isLoading: number}> = (props) => {
   const { isLoading } = props;
   return (
     <div className={`loader__container ${isLoading <= 0 ? 'loader__hidden' : ''}`}>
-      <RotatingLines
-        width='100'
-        strokeColor='#c4c4c4'
-        strokeWidth='1'
-        animationDuration='2'
-      />
+      <img src={loadingDog} alt='loading' />
     </div>
   );
 };
