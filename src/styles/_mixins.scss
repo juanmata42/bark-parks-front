@@ -1,0 +1,17 @@
+@use 'styles/breakpoints';
+@use 'styles/fonts';
+@use 'styles/colors';
+
+// mixin for main body of page
+@mixin main-body {
+    position: relative;
+    padding-left: calc(((100vw - breakpoints.$desktop) / 2));
+    padding-right: calc(((100vw - breakpoints.$desktop) / 2));
+    @media screen and (max-width: breakpoints.$desktop) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@mixin hasFooter {
+    padding-bottom: 250px;
+}

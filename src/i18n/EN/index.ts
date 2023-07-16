@@ -5,7 +5,7 @@ const en: lang = {
     welcome: 'Welcome!',
     logout: 'Logout',
   },
-  notFound: {
+  error: {
     title500: 'Sorry, there was an internal server error. We could not complete your request.',
     description500: 'Our team has been made aware of the issue. We apologize for the inconvenience',
     title404: 'Sorry, the page you are looking for is not on the web.',
@@ -22,6 +22,15 @@ const en: lang = {
     reason2404: 'The page has been eliminated or moved.',
     unknownStatus: 'The status returned is unknown and has not been handled',
     back: 'Back to home',
+  },
+  maintenance: {
+    welcome: 'Welcome to Bark Parks!',
+    welcomeBack: 'Welcome back!',
+    underMaintenance: 'Our website is currently under maintenance!',
+    supportedBy: 'Supported by:',
+    copyright: '© to fill up',
+    doingBestBringStable: 'We are doing our best to bring a new and more stable update.',
+    send: 'Thank you for your patience!',
   },
 };
 

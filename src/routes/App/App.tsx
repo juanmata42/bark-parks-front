@@ -3,8 +3,18 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
 import { routes, ROUTE_TYPE_REDIRECT, ROUTE_PATH } from 'routes';
 import Loading from 'components/Loading/Loading';
+import Maintenance from 'components/Maintenance/Maintenance';
+import { constants } from 'utils/defaultConstants';
 
 const App: React.FC = () => {
+  // Change this flag to false to disable maintenance screen at login
+  if (constants.MAINT_MODE) {
+    return (
+      <div>
+        <Maintenance />
+      </div>
+    );
+  }
   return (
     <Routes>
       {routes.map((route, index) => {

@@ -6,6 +6,7 @@ declare global {
   }
 }
 export const EN_LANGUAGE = 'EN';
+export const ES_LANGUAGE = 'ES';
 export const constants = {
   // The default language to use when none is specified
   DEFAULT_LANGUAGE: EN_LANGUAGE,

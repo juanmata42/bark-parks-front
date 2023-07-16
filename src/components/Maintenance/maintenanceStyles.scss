@@ -1,0 +1,31 @@
+@use 'styles/breakpoints';
+@use 'styles/fonts';
+@use 'styles/colors';
+@use 'styles/mixins';
+
+.maint {
+    @include mixins.main-body;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    width: 100%;
+}
+
+.maint__title {
+    font-weight: fonts.$bold;
+    font-size: fonts.$big-title;
+    margin: 40px 0 12px 0;
+}
+
+.maint__subtitle {
+    font-size: fonts.$subtitle;
+    margin: 40px 0 10px 0;
+    text-align: center;
+}
+
+.maint__logo {
+    height: 10vh;
+    width: auto;
+}
+

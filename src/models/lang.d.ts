@@ -16,13 +16,22 @@ export type errorLang = {
     unknownStatus: string,
     back: string,
 }
-
+export type maintenanceLang = {
+    welcome: string,
+    welcomeBack: string,
+    underMaintenance: string,
+    supportedBy: string,
+    copyright: string,
+    doingBestBringStable: string,
+    send: string,
+  }
 export type MainpageLang = {
     welcome: string,
     logout: string,
 }
 
 export type lang = {
+    maintenance: maintenanceLang;
     mainpage: mainpageLang;
-    notFound: errorLang;
+    error: errorLang;
 }
