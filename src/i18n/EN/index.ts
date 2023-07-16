@@ -32,6 +32,16 @@ const en: lang = {
     doingBestBringStable: 'We are doing our best to bring a new and more stable update.',
     send: 'Thank you for your patience!',
   },
+  header: {
+    home: 'Home',
+    about: 'About',
+    kennel: 'Kennel',
+    pawPost: 'PawPost',
+    shelters: 'Shelters',
+    profile: 'Profile',
+    login: 'Login',
+    logout: 'Logout',
+  },
 };
 
 export default en;

@@ -1,19 +1,19 @@
 import React from 'react';
 import { State } from 'models/state';
 import { useSelector } from 'react-redux';
-import './MainStyles.scss';
+import './ProfileStyles.scss';
 
-const Main: React.FC = () => {
+const Profile: React.FC = () => {
   /* how to bring redux state into component const literals = useSelector((state: State) => state.i18n.literals.error); */
   /* const loadingState = useSelector((state: State) => state.loading); */
   const literals = useSelector((state: State) => state.i18n.literals.error);
   return (
-    <div className='BarkParks'>
-      parks
+    <div className='Profile'>
+      Profile
     </div>
   );
 };
 
-Main.displayName = 'Main';
+Profile.displayName = 'Profile';
 
-export default Main;
+export default Profile;

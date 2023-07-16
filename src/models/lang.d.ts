@@ -29,9 +29,19 @@ export type MainpageLang = {
     welcome: string,
     logout: string,
 }
-
+export type headerLang = {
+    home: string,
+    about: string,
+    kennel: string,
+    pawPost: string,
+    profile: string,
+    shelters: string,
+    login: string,
+    logout: string,
+}
 export type lang = {
     maintenance: maintenanceLang;
     mainpage: mainpageLang;
+    header: headerLang;
     error: errorLang;
 }

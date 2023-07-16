@@ -1,19 +1,19 @@
 import React from 'react';
 import { State } from 'models/state';
 import { useSelector } from 'react-redux';
-import './MainStyles.scss';
+import './SheltersStyles.scss';
 
-const Main: React.FC = () => {
+const Shelters: React.FC = () => {
   /* how to bring redux state into component const literals = useSelector((state: State) => state.i18n.literals.error); */
   /* const loadingState = useSelector((state: State) => state.loading); */
   const literals = useSelector((state: State) => state.i18n.literals.error);
   return (
-    <div className='BarkParks'>
-      parks
+    <div className='Shelters'>
+      Shelters
     </div>
   );
 };
 
-Main.displayName = 'Main';
+Shelters.displayName = 'Shelters';
 
-export default Main;
+export default Shelters;
