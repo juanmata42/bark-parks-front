@@ -1,20 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import './styles/index.scss';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import reducers from './reducers';
-/* import registerServiceWorker from './serviceWorker'; */
-const store = createStore(reducers, compose(applyMiddleware(thunk)));
-ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>,
+import App from 'routes/App/App';
+import { store } from 'store';
+import * as serviceWorker from './serviceWorker';
 
-  document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>,
 );
-/* registerServiceWorker(); */
+
+serviceWorker.unregister();

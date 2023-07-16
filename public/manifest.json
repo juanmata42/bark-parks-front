@@ -1,21 +1,25 @@
 {
-  "short_name": "bark-parks",
-  "name": "bark-parks",
+  "short_name": "Simon Institute",
+  "name": "Simon Institute",
   "icons": [
     {
-      "src": "/logo192.png",
-      "sizes": "192x192",
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
     },
     {
-      "src": "/logo.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
-  "start_url": "/",
-  "theme_color": "#ffffff",
-  "background_color": "#FFFFFF",
+  "start_url": ".",
   "display": "standalone",
-  "scope": "/"
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
