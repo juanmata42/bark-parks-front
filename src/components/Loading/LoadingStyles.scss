@@ -1,3 +1,7 @@
+@use 'styles/breakpoints';
+@use 'styles/fonts';
+@use 'styles/colors';
+@use 'styles/mixins';
 .loader__hidden{
     display: none;
 }

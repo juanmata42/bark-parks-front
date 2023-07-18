@@ -5,33 +5,33 @@
    x="0px"
    y="0px"
    id="svg2"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   sodipodi:docname="bone-heart.svg"
+   inkscapeVersion="1.1 (c68e22c387, 2021-05-23)"
+   sodipodiDocname="bone-heart.svg"
    width="93.660156"
    height="54.150242"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
+   xmlnsSvg="http://www.w3.org/2000/svg"
+   xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlnsCc="http://creativecommons.org/ns#"
+   xmlnsDc="http://purl.org/dc/elements/1.1/">
   <metadata
      id="metadata14">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
+    <rdfRDF>
+      <ccWork
+         rdfAbout="">
+        <dcFormat>image/svg+xml</dcFormat>
+        <dcType
+           rdfResource="http://purl.org/dc/dcmitype/StillImage" />
+      </ccWork>
+    </rdfRDF>
   </metadata>
   <defs
      id="defs12">
     <linearGradient
        id="linearGradient2825"
-       inkscape:swatch="solid">
+       inkscapeSwatch="solid">
       <stop
          style="stop-color:#46433c;stop-opacity:0.55686277;"
          offset="0"
@@ -39,38 +39,38 @@
     </linearGradient>
     <linearGradient
        id="linearGradient2797"
-       inkscape:swatch="solid">
+       inkscapeSwatch="solid">
       <stop
          style="stop-color:#46433c;stop-opacity:1;"
          offset="0"
          id="stop2795" />
     </linearGradient>
   </defs>
-  <sodipodi:namedview
+  <sodipodiNamedview
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1"
      objecttolerance="10"
      gridtolerance="10"
      guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1581"
-     inkscape:window-height="878"
+     inkscapePageopacity="0"
+     inkscapePageshadow="2"
+     inkscapeWindow-width="1581"
+     inkscapeWindow-height="878"
      id="namedview10"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="3.9333334"
-     inkscape:cx="39.27966"
-     inkscape:cy="31.271186"
-     inkscape:window-x="30"
-     inkscape:window-y="26"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg2"
-     inkscape:pagecheckerboard="0" />
+     inkscapeZoom="3.9333334"
+     inkscapeCx="39.27966"
+     inkscapeCy="31.271186"
+     inkscapeWindow-x="30"
+     inkscapeWindow-y="26"
+     inkscapeWindow-maximized="0"
+     inkscapeCurrent-layer="svg2"
+     inkscapePagecheckerboard="0" />
   <path
      id="path4"
      style="fill:#000000"

@@ -5,32 +5,32 @@
    viewBox="0 0 24 24"
    version="1.1"
    id="svg4"
-   sodipodi:docname="add-meetup.svg"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   sodipodiDocname="add-meetup.svg"
+   inkscapeVersion="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+   xmlnsSvg="http://www.w3.org/2000/svg">
   <defs
      id="defs8" />
-  <sodipodi:namedview
+  <sodipodiNamedview
      id="namedview6"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
+     inkscapePageshadow="2"
+     inkscapePageopacity="0.0"
+     inkscapePagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="28.416667"
-     inkscape:cx="12"
-     inkscape:cy="12"
-     inkscape:window-width="1856"
-     inkscape:window-height="1050"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg4" />
+     inkscapeZoom="28.416667"
+     inkscapeCx="12"
+     inkscapeCy="12"
+     inkscapeWindow-width="1856"
+     inkscapeWindow-height="1050"
+     inkscapeWindow-x="0"
+     inkscapeWindow-y="0"
+     inkscapeWindow-maximized="1"
+     inkscapeCurrent-layer="svg4" />
   <path
      id="path2"
      style="color:#000000;fill:#000000;-inkscape-stroke:none"

@@ -1,7 +1,7 @@
 /* eslint-disable react/function-component-definition */
 import React from 'react';
-import LogoImg from 'assets/logo-p.svg';
-import dogGif from 'assets/loading-dog.gif';
+import LogoImg from 'assets/logo.svg';
+import dogGif from 'assets/loading_dog.gif';
 import en from 'i18n/EN';
 import './maintenanceStyles.scss';
 

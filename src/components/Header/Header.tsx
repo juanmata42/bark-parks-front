@@ -1,10 +1,10 @@
-import './header.scss';
+import './HeaderStyles.scss';
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import barkingIcon from 'assets/barking.svg';
 import happyDogIcon from 'assets/happy_dog.svg';
-import mainLogo from 'assets/logo-p.svg';
-import sheltersIcon from 'assets/shelters.svg';
+import mainLogo from 'assets/logo.svg';
+import sheltersIcon from 'assets/shelter.svg';
 import pawPrintIcon from 'assets/paw_print.svg';
 import { useSelector } from 'react-redux';
 

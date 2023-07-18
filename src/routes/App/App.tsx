@@ -4,6 +4,7 @@ import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
 import { routes, ROUTE_TYPE_REDIRECT, ROUTE_PATH } from 'routes';
 import Loading from 'components/Loading/Loading';
 import Maintenance from 'components/Maintenance/Maintenance';
+import Header from 'components/Header/Header';
 import { constants } from 'utils/defaultConstants';
 
 const App: React.FC = () => {
@@ -36,7 +37,8 @@ const App: React.FC = () => {
                 element={
                   (
                     <ErrorBoundary>
-                      <section>
+                      <Header />
+                      <section className='component'>
                         <Loading />
                         {route.component && <route.component />}
                       </section>

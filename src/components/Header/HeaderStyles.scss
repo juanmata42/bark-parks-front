@@ -1,3 +1,8 @@
-@import '../../../variables.scss';
+@use 'styles/breakpoints';
+@use 'styles/fonts';
+@use 'styles/colors';
+@use 'styles/mixins';
+
 .main-header {
+    
 }
