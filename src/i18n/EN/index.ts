@@ -41,6 +41,7 @@ const en: lang = {
     profile: 'Profile',
     login: 'Login',
     logout: 'Logout',
+    barkParks: 'BarkParks',
   },
 };
 

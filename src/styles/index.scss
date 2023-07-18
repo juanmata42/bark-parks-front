@@ -1,6 +1,7 @@
 @use 'normalize';
 @use 'fonts';
 @use 'colors';
+
 *,
 *:before,
 *:after {
@@ -146,4 +147,9 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

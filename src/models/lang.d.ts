@@ -38,6 +38,7 @@ export type headerLang = {
     shelters: string,
     login: string,
     logout: string,
+    barkParks: string,
 }
 export type lang = {
     maintenance: maintenanceLang;

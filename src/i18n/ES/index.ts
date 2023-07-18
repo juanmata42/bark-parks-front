@@ -41,6 +41,7 @@ const es: lang = {
     shelters: 'Refugios',
     login: 'Login',
     logout: 'Logout',
+    barkParks: 'BarkParks',
   },
 };
 

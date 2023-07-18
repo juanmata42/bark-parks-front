@@ -2,14 +2,16 @@ import './HeaderStyles.scss';
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import barkingIcon from 'assets/barking.svg';
-import happyDogIcon from 'assets/happy_dog.svg';
-import mainLogo from 'assets/logo.svg';
+import kennel from 'assets/kennel.svg';
+import park from 'assets/park.svg';
 import sheltersIcon from 'assets/shelter.svg';
 import pawPrintIcon from 'assets/paw_print.svg';
 import { useSelector } from 'react-redux';
+import { State } from 'src/models/state';
 
 const Header = (): JSX.Element => {
   const location = useLocation();
+  const literals = useSelector((state: State) => state.i18n.literals.header);
   return (
     <header className='main-header'>
       <nav className='main-nav'>
@@ -19,8 +21,8 @@ const Header = (): JSX.Element => {
               to='/pawpost'
               className='main-nav__link pawPost'
             >
-              <img src={barkingIcon} alt='barking' />
-              PawPost
+              <img src={barkingIcon} alt='barking' className='main-nav__icon' />
+              {literals.pawPost}
             </NavLink>
           </li>
           <li className='main-nav__item'>
@@ -28,8 +30,8 @@ const Header = (): JSX.Element => {
               to='/kennel'
               className='main-nav__link kennel'
             >
-              <img src={happyDogIcon} alt='happy dog' />
-              Kennel
+              <img src={kennel} alt='happy dog' className='main-nav__icon' />
+              {literals.kennel}
             </NavLink>
           </li>
           <li className='main-nav__item'>
@@ -37,8 +39,8 @@ const Header = (): JSX.Element => {
               to='/home'
               className='main-nav__link home'
             >
-              <img src={mainLogo} alt='logo' />
-              Home
+              <img src={park} alt='logo' className='main-nav__icon' />
+              {literals.home}
             </NavLink>
           </li>
           <li className='main-nav__item'>
@@ -46,8 +48,8 @@ const Header = (): JSX.Element => {
               to='/shelters'
               className='main-nav__link shelters'
             >
-              <img src={sheltersIcon} alt='shelters' />
-              Shelters
+              <img src={sheltersIcon} alt='shelters' className='main-nav__icon' />
+              {literals.shelters}
             </NavLink>
           </li>
           <li className='main-nav__item'>
@@ -55,8 +57,8 @@ const Header = (): JSX.Element => {
               to='/profile'
               className='main-nav__link profile'
             >
-              <img src={pawPrintIcon} alt='paw print' />
-              Profile
+              <img src={pawPrintIcon} alt='paw print' className='main-nav__icon' />
+              {literals.profile}
             </NavLink>
           </li>
         </ul>
