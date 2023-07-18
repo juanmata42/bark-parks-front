@@ -46,6 +46,13 @@ const es: lang = {
     groups: 'Grupos',
     settings: 'Configuración',
   },
+  auth: {
+    login: 'Login',
+    email: 'Email',
+    password: 'Contraseña',
+    forgotPassword: '¿Olvidaste tu contraseña?',
+    dontHaveAccount: '¿No tienes una cuenta?',
+  },
 };
 
 export default es;

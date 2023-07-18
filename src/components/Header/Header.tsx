@@ -63,6 +63,15 @@ const Header = (): JSX.Element => {
               {literals.profile}
             </NavLink>
           </li>
+          <li className='main-nav__item'>
+            <NavLink
+              to='/auth'
+              className='main-nav__link login'
+            >
+              <img src={pawPrintIcon} alt='paw print' className='main-nav__icon' />
+              {literals.login}
+            </NavLink>
+          </li>
         </ul>
       </nav>
       {routesWithSubheader.includes(location.pathname) ? (<SubHeader />) : null}

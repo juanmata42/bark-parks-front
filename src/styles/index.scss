@@ -10,7 +10,9 @@
   box-sizing: border-box;
 }
 
-
+.component{
+  position: relative;
+}
 body {
   margin: 0;
   font-family: fonts.$roboto;

@@ -43,9 +43,17 @@ export type headerLang = {
     groups: string,
     settings: string,
 }
+export type authLang = {
+    login: string,
+    email: string,
+    password: string,
+    forgotPassword: string,
+    dontHaveAccount: string,
+}
 export type lang = {
     maintenance: maintenanceLang;
     mainpage: mainpageLang;
     header: headerLang;
+    auth: authLang;
     error: errorLang;
 }
