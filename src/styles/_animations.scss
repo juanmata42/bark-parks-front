@@ -1,0 +1,22 @@
+@use 'styles/breakpoints';
+@use 'styles/fonts';
+@use 'styles/colors';
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes background {
+    0% {
+        background-color: colors.$primary;
+    }
+
+    100% {
+        background-color: colors.$white;
+    }
+}

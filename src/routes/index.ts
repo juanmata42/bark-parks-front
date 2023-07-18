@@ -6,6 +6,9 @@ import Profile from './Profile/Profile';
 import Kennel from './Kennel/Kennel';
 import PawPost from './PawPost/PawPost';
 import Shelters from './Shelters/Shelters';
+import Settings from './Settings/Settings';
+import Friends from './Friends/Friends';
+import Groups from './Groups/Groups';
 
 export const ROUTE_TYPE_REDIRECT = 'redirect';
 export const ROUTE_BASE_PATH = '/';
@@ -38,14 +41,6 @@ export const routes = [
     footer: true,
   },
   {
-    path: ROUTE_PATH.ABOUT,
-    component: About,
-    exact: false,
-    ignoreSession: true,
-    header: true,
-    footer: true,
-  },
-  {
     path: ROUTE_PATH.AUTH,
     component: Auth,
     exact: false,
@@ -56,7 +51,23 @@ export const routes = [
   {
     path: ROUTE_PATH.PROFILE,
     component: Profile,
-    exact: false,
+    exact: true,
+    ignoreSession: false,
+    header: true,
+    footer: true,
+  },
+  {
+    path: `${ROUTE_PATH.PROFILE}/settings`,
+    component: Settings,
+    exact: true,
+    ignoreSession: false,
+    header: true,
+    footer: true,
+  },
+  {
+    path: `${ROUTE_PATH.PROFILE}/about`,
+    component: About,
+    exact: true,
     ignoreSession: false,
     header: true,
     footer: true,
@@ -64,7 +75,23 @@ export const routes = [
   {
     path: ROUTE_PATH.KENNEL,
     component: Kennel,
-    exact: false,
+    exact: true,
+    ignoreSession: false,
+    header: true,
+    footer: true,
+  },
+  {
+    path: `${ROUTE_PATH.KENNEL}/friends`,
+    component: Friends,
+    exact: true,
+    ignoreSession: false,
+    header: true,
+    footer: true,
+  },
+  {
+    path: `${ROUTE_PATH.KENNEL}/groups`,
+    component: Groups,
+    exact: true,
     ignoreSession: false,
     header: true,
     footer: true,

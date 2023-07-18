@@ -39,6 +39,9 @@ export type headerLang = {
     login: string,
     logout: string,
     barkParks: string,
+    friends: string,
+    groups: string,
+    settings: string,
 }
 export type lang = {
     maintenance: maintenanceLang;

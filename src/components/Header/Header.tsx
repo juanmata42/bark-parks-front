@@ -1,6 +1,6 @@
 import './HeaderStyles.scss';
-import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import barkingIcon from 'assets/barking.svg';
 import kennel from 'assets/kennel.svg';
 import park from 'assets/park.svg';
@@ -8,9 +8,9 @@ import sheltersIcon from 'assets/shelter.svg';
 import pawPrintIcon from 'assets/paw_print.svg';
 import { useSelector } from 'react-redux';
 import { State } from 'src/models/state';
+import SubHeader from './SubHeader';
 
 const Header = (): JSX.Element => {
-  const location = useLocation();
   const literals = useSelector((state: State) => state.i18n.literals.header);
   return (
     <header className='main-header'>
@@ -30,7 +30,7 @@ const Header = (): JSX.Element => {
               to='/kennel'
               className='main-nav__link kennel'
             >
-              <img src={kennel} alt='happy dog' className='main-nav__icon' />
+              <img src={kennel} alt='kennel' className='main-nav__icon' />
               {literals.kennel}
             </NavLink>
           </li>
@@ -39,7 +39,7 @@ const Header = (): JSX.Element => {
               to='/home'
               className='main-nav__link home'
             >
-              <img src={park} alt='logo' className='main-nav__icon' />
+              <img src={park} alt='park' className='main-nav__icon' />
               {literals.home}
             </NavLink>
           </li>
@@ -63,6 +63,7 @@ const Header = (): JSX.Element => {
           </li>
         </ul>
       </nav>
+      <SubHeader />
     </header>
   );
 };
