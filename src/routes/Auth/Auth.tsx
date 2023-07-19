@@ -148,8 +148,15 @@ const Auth: React.FC = () => {
             <div className='fa fa-commenting' />
             <input className='password' type='password' autoComplete='off' placeholder='password' />
             <button className='password-button' type='button'>
-              aa
-              {/* <i className='bx bx-show' /> */}
+              {showPassword ? (
+                <span className='material-symbols-outlined'>
+                  visibility_off
+                </span>
+              ) : (
+                <span className='material-symbols-outlined'>
+                  visibility
+                </span>
+              )}
             </button>
           </label>
           <button className='login-button' type='button'>Login</button>
