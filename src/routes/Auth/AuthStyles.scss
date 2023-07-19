@@ -3,19 +3,20 @@
 @use 'styles/colors';
 @use 'styles/mixins';
 
-.auth{
+.auth {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     height: 100%;
-    padding-top: 50px;
+    background-color: colors.$secondary;
 }
+
 .center {
     position: relative;
     display: inline-block;
-    width: 275px;
+    width: 100%;
     height: 490px;
     border-radius: 3px;
     overflow: hidden;
@@ -26,18 +27,18 @@
 .center .ear {
     position: absolute;
     top: -110px;
-    width: 200px;
+    width: 150px;
     height: 200px;
     border-radius: 50%;
     background-color: colors.$text-color;
 }
 
 .center .ear.ear--left {
-    left: -135px;
+    left: calc(50% - 200px);
 }
 
 .center .ear.ear--right {
-    right: -135px;
+    right: calc(50% - 200px);
 }
 
 .center .face {
@@ -166,38 +167,39 @@
 
 .center .hands {
     position: relative;
+    pointer-events: none;
 }
 
 .center .hands .hand {
     position: absolute;
-    top: -6px;
+    top: -10px;
     display: flex;
     transition: transform 0.5s ease-in-out;
     z-index: 1;
 }
 
 .center .hands .hand--left {
-    left: 50px;
+    left: calc(50% - 100px);
 }
 
 .center .hands .hand--left.hide {
-    transform: translate(2px, -155px) rotate(-160deg);
+    transform: translate(20px, -155px) rotate(-160deg);
 }
 
 .center .hands .hand--left.peek {
-    transform: translate(0px, -120px) rotate(-160deg);
+    transform: translate(20px, -135px) rotate(-160deg);
 }
 
 .center .hands .hand--right {
-    left: 170px;
+    left: calc(50% + 50px);
 }
 
 .center .hands .hand--right.hide {
-    transform: translate(-6px, -155px) rotate(160deg);
+    transform: translate(-26px, -155px) rotate(160deg);
 }
 
 .center .hands .hand--right.peek {
-    transform: translate(-4px, -120px) rotate(160deg);
+    transform: translate(-30px, -135px) rotate(160deg);
 }
 
 .center .hands .finger {
@@ -207,7 +209,7 @@
 
 .center .hands .finger .bone {
     width: 20px;
-    height: 20px;
+    height: 25px;
     border: 2px solid colors.$text-color;
     border-bottom: none;
     border-top: none;
@@ -217,7 +219,7 @@
 .center .hands .finger .nail {
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 15px;
     width: 20px;
     height: 18px;
     border-radius: 50%;
@@ -234,7 +236,7 @@
 
 .center .hands .finger:nth-child(1) .bone,
 .center .hands .finger:nth-child(3) .bone {
-    height: 10px;
+    height: 15px;
 }
 
 .center .hands .finger:nth-child(3) {
@@ -248,13 +250,21 @@
 
 .center .hands .finger:nth-child(1) .nail,
 .center .hands .finger:nth-child(3) .nail {
-    top: 0px;
+    top: 5px;
 }
 
 .center .login {
     position: relative;
     display: flex;
     flex-direction: column;
+    width: calc(breakpoints.$mobile - 100px);
+    margin: 0 auto;
+
+    @media screen and (max-width: breakpoints.$mobile) {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
 }
 
 .center .login label {

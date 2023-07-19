@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { State } from 'models/state';
 import { useSelector } from 'react-redux';
 import './AuthStyles.scss';
@@ -9,24 +9,73 @@ const Auth: React.FC = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
-  /* const handleUsernameChange = (event: ) => {
-    setUsername(event.target.value);
-  };
+  useEffect(() => {
+    const usernameInput = document.querySelector('.username') as HTMLInputElement;
+    const passwordInput = document.querySelector('.password') as HTMLInputElement;
+    const showPasswordButton = document.querySelector('.password-button') as HTMLButtonElement;
+    const face = document.querySelector('.face') as HTMLElement;
+    const tongue = document.querySelector('.tongue') as HTMLElement;
+    const hands = document.querySelectorAll('.hand') as NodeListOf<HTMLInputElement>;
+    const updateRotateHead = (value: string) => {
+      const length = Math.min(value.length - 16, 19);
+      face.style.setProperty('--rotate-head', `${-length}deg`);
+    };
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
+    function handleUsernameInputFocus() {
+      hands.forEach((hand) => hand.classList.remove('hide', 'peek'));
+    }
 
-  const handleTogglePassword = () => {
-    setShowPassword(!showPassword);
-  };
+    function handleUsernameInputChange(event: Event) {
+      const inputElement = event.target as HTMLInputElement;
+      updateRotateHead(inputElement.value);
+      setUsername(inputElement.value);
+    }
 
-  const handleSubmit = (event) => {
+    function handlePasswordInputFocus() {
+      hands.forEach((hand) => hand.classList.add(`${passwordInput.type === 'password' ? 'hide' : 'peek'}`));
+      tongue.classList.remove('breath');
+      face.style.setProperty('--rotate-head', '0deg');
+    }
+
+    function handlePasswordInputBlur() {
+      hands.forEach((hand) => hand.classList.remove('hide', 'peek'));
+      tongue.classList.add('breath');
+    }
+
+    function handlePasswordInputChange(event: Event) {
+      const inputElement = event.target as HTMLInputElement;
+      setPassword(inputElement.value);
+    }
+
+    function handleShowPasswordButtonClick() {
+      passwordInput.type = !showPassword ? 'text' : 'password';
+      hands.forEach((hand) => hand.classList.remove(`${passwordInput.type !== 'password' ? 'hide' : 'peek'}`));
+      hands.forEach((hand) => hand.classList.add(`${passwordInput.type === 'password' ? 'hide' : 'peek'}`));
+      setShowPassword(!showPassword);
+    }
+
+    // Attach event listeners using named functions
+    usernameInput.addEventListener('focus', handleUsernameInputFocus);
+    usernameInput.addEventListener('input', handleUsernameInputChange);
+    passwordInput.addEventListener('focus', handlePasswordInputFocus);
+    passwordInput.addEventListener('blur', handlePasswordInputBlur);
+    passwordInput.addEventListener('input', handlePasswordInputChange);
+    showPasswordButton.addEventListener('click', handleShowPasswordButtonClick);
+
+    return () => {
+      // Remove event listeners using named functions
+      usernameInput.removeEventListener('focus', handleUsernameInputFocus);
+      usernameInput.removeEventListener('input', handleUsernameInputChange);
+      passwordInput.removeEventListener('focus', handlePasswordInputFocus);
+      passwordInput.removeEventListener('blur', handlePasswordInputBlur);
+      showPasswordButton.removeEventListener('click', handleShowPasswordButtonClick);
+    };
+  }, [showPassword]);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Perform login or submit logic here
-    console.log('Username:', username);
-    console.log('Password:', password);
-  }; */
+  };
 
   return (
     <div className='auth'>
