@@ -14,7 +14,6 @@ const Auth: React.FC = () => {
     const passwordInput = document.querySelector('.password') as HTMLInputElement;
     const showPasswordButton = document.querySelector('.password-button') as HTMLButtonElement;
     const face = document.querySelector('.face') as HTMLElement;
-    const tongue = document.querySelector('.tongue') as HTMLElement;
     const hands = document.querySelectorAll('.hand') as NodeListOf<HTMLInputElement>;
     const updateRotateHead = (value: string) => {
       const length = Math.min(value.length - 16, 19);
@@ -33,13 +32,11 @@ const Auth: React.FC = () => {
 
     function handlePasswordInputFocus() {
       hands.forEach((hand) => hand.classList.add(`${passwordInput.type === 'password' ? 'hide' : 'peek'}`));
-      tongue.classList.remove('breath');
       face.style.setProperty('--rotate-head', '0deg');
     }
 
     function handlePasswordInputBlur() {
       hands.forEach((hand) => hand.classList.remove('hide', 'peek'));
-      tongue.classList.add('breath');
     }
 
     function handlePasswordInputChange(event: Event) {
