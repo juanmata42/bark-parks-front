@@ -5,10 +5,12 @@ import { routes, ROUTE_TYPE_REDIRECT, ROUTE_PATH } from 'routes';
 import Loading from 'components/Loading/Loading';
 import Maintenance from 'components/Maintenance/Maintenance';
 import Header from 'components/Header/Header';
+import { State } from 'src/models/state';
+import { useAppSelector } from 'store';
 import { constants } from 'utils/defaultConstants';
 
 const App: React.FC = () => {
-  const isLogged = localStorage.getItem('logged');
+  const sessionChecked = useAppSelector((state: State) => state.session.checked);
   // Change this flag to false to disable maintenance screen at login
   if (constants.MAINT_MODE) {
     return (
@@ -35,7 +37,7 @@ const App: React.FC = () => {
               <Route
                 key={index}
                 path={route.path}
-                element={route.ignoreSession || isLogged
+                element={route.ignoreSession || sessionChecked
                   ? (
                     <ErrorBoundary>
                       <Header />

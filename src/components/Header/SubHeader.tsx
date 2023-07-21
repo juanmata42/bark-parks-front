@@ -1,17 +1,25 @@
 import './SubHeaderStyles.scss';
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import heartPaw from 'assets/heart_paw.svg';
 import group from 'assets/group.svg';
 import settings from 'assets/settings.svg';
 import about from 'assets/about.svg';
-import logout from 'assets/paw_exit.svg';
-import { useSelector } from 'react-redux';
+import exitIcon from 'assets/exit.svg';
+import { useAppSelector, useAppDispatch } from 'store';
+import { logoutAction } from 'store/session/actions';
 import { State } from 'src/models/state';
 
 const SubHeader = (): JSX.Element => {
-  const literals = useSelector((state: State) => state.i18n.literals.header);
+  const literals = useAppSelector((state: State) => state.i18n.literals.header);
   const location = useLocation();
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  const logoutHandler = () => {
+    dispatch(logoutAction(() => {
+      navigate('/home');
+    }));
+  };
   return (
     <header className='subHeader'>
       <nav className='subHeader-nav'>
@@ -59,14 +67,12 @@ const SubHeader = (): JSX.Element => {
                   </NavLink>
                 </li>
                 <li className='subHeader-nav__item'>
-                  <NavLink
-                    to='/profile/logout'
-                    className='subHeader-nav__link logout'
-                  >
-                    <img src={logout} alt='paw print' className='subHeader-nav__icon' />
+                  <button className='subHeader-nav__link logout' type='button' onClick={logoutHandler}>
+                    <img src={exitIcon} alt='paw print' className='subHeader-nav__icon' />
                     {literals.logout}
-                  </NavLink>
+                  </button>
                 </li>
+
               </>
             )}
         </ul>

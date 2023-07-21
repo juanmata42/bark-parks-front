@@ -380,6 +380,24 @@
     margin-top: 15px;
 }
 
+.auth-error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    .auth-error__text{
+        color: colors.$white;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .auth-error__icon{
+        height: auto;
+        width: 40px;
+        filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(124deg) brightness(107%) contrast(101%);
+    }
+}
+
 @-webkit-keyframes breath {
 
     0%,

@@ -31,6 +31,7 @@ const INITIAL_STATE: State = {
       blockedGroupsArray: [],
       postsArray: [],
     },
+    checked: false,
     error: '',
   },
 };

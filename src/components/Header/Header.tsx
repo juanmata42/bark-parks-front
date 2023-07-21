@@ -6,21 +6,22 @@ import kennel from 'assets/kennel.svg';
 import park from 'assets/park.svg';
 import sheltersIcon from 'assets/shelter.svg';
 import pawPrintIcon from 'assets/paw_print.svg';
-import exitIcon from 'assets/exit.svg';
-import { useSelector } from 'react-redux';
 import { State } from 'src/models/state';
 import { routesWithSubheader, routesWithSession } from 'utils/routeConstants';
+import { useAppSelector } from 'store';
 import SubHeader from './SubHeader';
 
 const Header = (): JSX.Element => {
-  const literals = useSelector((state: State) => state.i18n.literals.header);
+  const literals = useAppSelector((state: State) => state.i18n.literals.header);
+  const sessionChecked = useAppSelector((state: State) => state.session.checked);
   const location = useLocation();
-  const isLogged = localStorage.getItem('logged');
-
   // Helper function to check if NavLink should be rendered based on routesWithSession and isLogged
   const shouldRenderNavLink = (to: string) => {
     if (routesWithSession.includes(to)) {
-      return isLogged === 'true';
+      return sessionChecked;
+    }
+    if (to.includes('/auth')) {
+      return !sessionChecked;
     }
     return true;
   };
@@ -75,14 +76,6 @@ const Header = (): JSX.Element => {
                 <img src={pawPrintIcon} alt='paw print' className='main-nav__icon' />
                 {literals.login}
               </NavLink>
-            </li>
-          )}
-          {isLogged !== 'true' && (
-            <li className='main-nav__item'>
-              <button className='main-nav__link logout' type='button'>
-                <img src={exitIcon} alt='paw print' className='main-nav__icon' />
-                {literals.logout}
-              </button>
             </li>
           )}
         </ul>

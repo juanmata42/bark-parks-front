@@ -1,14 +1,13 @@
 import React from 'react';
 import { errorLang } from 'models/lang';
 import { State } from 'models/state';
-import { useSelector } from 'react-redux';
-
+import { useAppSelector } from 'store';
 import './ErrorStyles.scss';
 import { useParams } from 'react-router-dom';
 
 const Error: React.FC = () => {
   const { status } = useParams();
-  const literals = useSelector((state : State) => state.i18n.literals.error);
+  const literals = useAppSelector((state: State) => state.i18n.literals.error);
   const availableStatus = ['500', '401', '404', '400'];
   if (status) {
     if (!availableStatus.includes(status)) {

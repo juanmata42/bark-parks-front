@@ -3,10 +3,12 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import loading from './loading';
 import i18n from './i18n';
+import session from './session';
 
 const combinedReducer = combineReducers({
   loading,
   i18n,
+  session,
 });
 
 const rootReducer = (state: any, action: any) => {

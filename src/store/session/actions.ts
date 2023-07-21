@@ -44,13 +44,13 @@ export function loginAction(
     dispatch(sessionActions.clearError());
     dispatch(loadingActions.show());
     // eslint-disable-next-line no-unused-vars
-    const loginresult : any = await api.login({ email, password });
+    const loginresult: any = await api.login({ email, password });
     if (loginresult.response) {
       console.error(loginresult);
-      dispatch(sessionActions.error('Unknown user/password '));
+      dispatch(sessionActions.error(loginresult.response.status));
       dispatch(loadingActions.hide());
       if (callback && typeof callback === 'function') {
-        callback();
+        callback(false);
       }
       return false;
     }
@@ -58,6 +58,9 @@ export function loginAction(
     localStorage.setItem('logged', 'true');
     dispatch(sessionActions.success(userData));
     dispatch(loadingActions.hide());
+    if (callback && typeof callback === 'function') {
+      callback(true);
+    }
     return true;
   };
 }
@@ -83,7 +86,7 @@ export function loginAction(
     }
   };
 } */
-export function logoutAction() {
+export function logoutAction(callback: CallableFunction) {
   return async (dispatch: Dispatch<AnyAction>) => {
     dispatch(loadingActions.show());
     localStorage.clear();
@@ -92,5 +95,8 @@ export function logoutAction() {
 
     dispatch(sessionActions.clear());
     dispatch(loadingActions.hide());
+    if (callback && typeof callback === 'function') {
+      callback();
+    }
   };
 }

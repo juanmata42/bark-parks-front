@@ -9,5 +9,6 @@ export type State = {
   session: {
     user: User;
     error: string;
+    checked: boolean;
   },
 };

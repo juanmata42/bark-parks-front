@@ -52,6 +52,7 @@ const en: lang = {
     password: 'Password',
     forgotPassword: 'Forgot password?',
     dontHaveAccount: 'Don\'t have an account?',
+    emailOrPasswordIncorrect: 'Incorrect email or password',
   },
 };
 

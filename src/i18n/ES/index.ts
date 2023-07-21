@@ -52,6 +52,7 @@ const es: lang = {
     password: 'Contraseña',
     forgotPassword: '¿Olvidaste tu contraseña?',
     dontHaveAccount: '¿No tienes una cuenta?',
+    emailOrPasswordIncorrect: 'Email o contraseña incorrectos',
   },
 };
 

@@ -49,6 +49,7 @@ export type authLang = {
     password: string,
     forgotPassword: string,
     dontHaveAccount: string,
+    emailOrPasswordIncorrect: string;
 }
 export type lang = {
     maintenance: maintenanceLang;
