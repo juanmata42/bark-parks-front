@@ -41,7 +41,7 @@ export const routes = [
     footer: true,
   },
   {
-    path: ROUTE_PATH.AUTH,
+    path: `${ROUTE_PATH.AUTH}/login`,
     component: Auth,
     exact: false,
     ignoreSession: true,

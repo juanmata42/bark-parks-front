@@ -6,4 +6,8 @@ export type State = {
     language: string;
     literals: lang;
   },
+  session: {
+    user: User;
+    error: string;
+  },
 };

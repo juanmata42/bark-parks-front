@@ -8,6 +8,7 @@ import Header from 'components/Header/Header';
 import { constants } from 'utils/defaultConstants';
 
 const App: React.FC = () => {
+  const isLogged = localStorage.getItem('logged');
   // Change this flag to false to disable maintenance screen at login
   if (constants.MAINT_MODE) {
     return (
@@ -34,8 +35,8 @@ const App: React.FC = () => {
               <Route
                 key={index}
                 path={route.path}
-                element={
-                  (
+                element={route.ignoreSession || isLogged
+                  ? (
                     <ErrorBoundary>
                       <Header />
                       <section className='component'>
@@ -43,8 +44,9 @@ const App: React.FC = () => {
                         {route.component && <route.component />}
                       </section>
                     </ErrorBoundary>
-                  )
-                }
+                  ) : (
+                    <Navigate to={`${ROUTE_PATH.AUTH}/login`} replace />
+                  )}
               />
             );
         }
