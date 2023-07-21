@@ -52,7 +52,7 @@
                     height: 100%;
                     gap: 5px;
                     font-weight: fonts.$bold;
-                    
+                    font-size: fonts.$small-subtitle;
                     @media screen and (max-width: breakpoints.$mobile) {
                         font-size: fonts.$small-text;
                     }

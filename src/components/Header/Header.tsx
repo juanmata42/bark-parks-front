@@ -77,12 +77,12 @@ const Header = (): JSX.Element => {
               </NavLink>
             </li>
           )}
-          {shouldRenderNavLink('/auth/logout') && (
+          {isLogged !== 'true' && (
             <li className='main-nav__item'>
-              <NavLink to='/auth/login' className='main-nav__link login'>
+              <button className='main-nav__link logout' type='button'>
                 <img src={exitIcon} alt='paw print' className='main-nav__icon' />
                 {literals.logout}
-              </NavLink>
+              </button>
             </li>
           )}
         </ul>

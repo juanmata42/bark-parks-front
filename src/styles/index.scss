@@ -164,3 +164,12 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  font-family: fonts.$roboto;
+  color: colors.$text-color;
+}
