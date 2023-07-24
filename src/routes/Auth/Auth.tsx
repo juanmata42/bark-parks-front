@@ -3,7 +3,7 @@ import { State } from 'models/state';
 import { useAppSelector, useAppDispatch } from 'store';
 import './AuthStyles.scss';
 import dogQuestionIcon from 'assets/dog_question.svg';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { loginAction } from 'store/session/actions';
 
 const Auth: React.FC = () => {

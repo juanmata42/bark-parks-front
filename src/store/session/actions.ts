@@ -43,7 +43,8 @@ export function loginAction(
   return async (dispatch: Dispatch) => {
     dispatch(sessionActions.clearError());
     dispatch(loadingActions.show());
-    // eslint-disable-next-line no-unused-vars
+    // qwerty this any and the rest will turn into axioserror || response body
+    // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-explicit-any
     const loginresult: any = await api.login({ email, password });
     if (loginresult.response) {
       console.error(loginresult);
